@@ -30,17 +30,33 @@
             min-height: 300px;
             margin: 0 auto;
         }
+        form{
+            width:90%;
+            text-align: center;
+        }
         label{
             display: block;
             margin: 10px 0;
+            text-align: start;
         }
 
-        input{
+        input, textarea{
             margin-bottom: 20px;
+            padding: 20px;
+            width: 90%;
+        }
+        textarea.paragrafo{
+            min-height: 200px
         }
 
         button{
             display: block;
+            margin: 0 auto;
+            padding: 10px 25px;
+            border: none;
+            outline: none;
+            background-color: #2a9d8f;
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -49,7 +65,7 @@
     <div class="container">
         <form action="./recived.php" method="POST">
             <label for="paragrafo">Inserire frase:</label>
-            <input type="text" name="paragrafo" id="paragrafo">
+            <textarea class="paragrafo" type="text" name="paragrafo" id="paragrafo"></textarea>
 
             <label for="badwords">badwords:</label>
             <input type="text" name="badwords" id="badwords">
